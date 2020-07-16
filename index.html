@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relógio</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+  <div id="relogio"></div>
+
+  <script>
+
+  function clock () {
+    var newhour = new Date();
+    var hours = newhour.getHours();
+    var minutes = newhour.getMinutes();
+    var seconds = newhour.getSeconds();
+
+    if (hours < 10) {
+      hours = "0"+hours;
+    }
+
+    if (minutes < 10) {
+      minutes = "0"+minutes;
+    }
+
+    if (seconds < 10) {
+      seconds = "0"+seconds;
+    }
+
+    document.getElementById('relogio').innerHTML = hours+':'+minutes+':'+seconds;
+  }
+
+
+  window.setInterval("clock()", 1000);
+  
+  
+  
+  </script>
+  
+</body>
+</html>
